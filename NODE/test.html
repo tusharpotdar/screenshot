@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta Http-Equiv="Cache-Control" Content="no-cache">
+        <meta Http-Equiv="Pragma" Content="no-cache">
+        <meta Http-Equiv="Expires" Content="0">
+        <meta Http-Equiv="Pragma-directive: no-cache">
+        <meta Http-Equiv="Cache-directive: no-cache">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+    <body style="background-color:#455a64">
+        <div style="text-align: center; vertical-align: middle;">
+            <p style="background-color: #0a6703;height:40px"></p>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div style="text-align: center; vertical-align: middle;">
+            <img id="qrcode" src="" alt="Loading.." style="text-align:center;background-color: white;"/>
+            <br>
+            <p style="color: white;font-size: x-large;">Scan QR Code using app</p>
+        </div>
+        <div style="text-align: center; vertical-align: middle;">
+            <img src="lodash.png">
+        </div>
+
+        <script>
+
+            $(document).ready(function(){
+                startExeu();
+            });
+
+
+            function startExeu() {
+                setInterval(getNewImage,100);
+            }
+            function getNewImage(){
+                var d = new Date();
+                var n = d.getTime();
+                var _img = document.getElementById("qrcode");
+                _img.src = "http://res.cloudinary.com/dazkf9e4z/image/upload/i5ak0wve8omorlkxog9d.png"+"?timeStamp="+n;
+            }
+
+        </script>
+
+    </body>
+</html>
